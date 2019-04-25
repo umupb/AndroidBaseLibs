@@ -1,2 +1,2 @@
 # AndroidBaseLibs
-V1.0 https://jitpack.io/#umupb/AndroidBaseLibs/1.0
+# Gradle:   https://jitpack.io/#umupb/AndroidBaseLibs/v1.0
