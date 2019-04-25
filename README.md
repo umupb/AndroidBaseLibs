@@ -1,3 +1,2 @@
 # AndroidBaseLibs
-base lib code
-https://jitpack.io/#umupb/AndroidBaseLibs/1.0
+V1.0 https://jitpack.io/#umupb/AndroidBaseLibs/1.0
