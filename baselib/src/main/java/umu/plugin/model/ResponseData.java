@@ -2,6 +2,8 @@ package umu.plugin.model;
 
 import java.util.Map;
 
+import umu.plugin.util.FlutterConstant;
+
 /**
  * 响应数据块
  * 作者：wjh on 2019-04-23 16:14

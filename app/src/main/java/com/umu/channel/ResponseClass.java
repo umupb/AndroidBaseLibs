@@ -1,8 +1,8 @@
 package com.umu.channel;
 
 import io.flutter.plugin.common.MethodChannel;
-import plugin.model.FlutterChannel;
-import plugin.util.ArgumentUtil;
+import umu.plugin.model.FlutterChannel;
+import umu.plugin.util.ArgumentUtil;
 
 /**
  * 响应对象
