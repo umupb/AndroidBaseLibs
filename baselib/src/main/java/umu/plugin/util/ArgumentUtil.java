@@ -1,10 +1,10 @@
-package plugin.util;
+package umu.plugin.util;
 
 import java.util.Map;
 import java.util.UUID;
 
-import plugin.model.FlutterChannel;
-import plugin.model.ResponseData;
+import umu.plugin.model.FlutterChannel;
+import umu.plugin.model.ResponseData;
 
 
 /**

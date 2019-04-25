@@ -1,6 +1,6 @@
-package plugin.channel;
+package com.umu.channel;
 
-import plugin.model.RequestData;
+import umu.plugin.model.RequestData;
 
 /**
  * Method通道回调

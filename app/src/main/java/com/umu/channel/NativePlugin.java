@@ -1,4 +1,4 @@
-package plugin.plugin;
+package com.umu.channel;
 
 
 import android.text.TextUtils;
@@ -6,11 +6,8 @@ import android.text.TextUtils;
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodChannel;
-import plugin.channel.IEventSender;
-import plugin.channel.IMethodCallHandler;
-import plugin.channel.IMethodCallback;
-import plugin.channel.ResponseClass;
-import plugin.model.RequestData;
+import umu.plugin.model.RequestData;
+
 
 /**
  * 插件基类
@@ -82,7 +79,7 @@ public abstract class NativePlugin {
      * @param arguments
      */
     public void sendEventMsg(Object arguments) {
-        if (eventSender != null) {
+        if (eventSender != null && arguments != null) {
             eventSender.send(arguments);
         }
     }

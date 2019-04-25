@@ -1,4 +1,4 @@
-package plugin.channel;
+package com.umu.channel;
 
 import android.text.TextUtils;
 
@@ -6,8 +6,8 @@ import java.util.Map;
 
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
-import plugin.model.RequestData;
-import plugin.util.ArgumentUtil;
+import umu.plugin.model.RequestData;
+import umu.plugin.util.ArgumentUtil;
 
 /**
  * Method通道回调基类

@@ -1,4 +1,4 @@
-package plugin.channel;
+package com.umu.channel;
 
 import io.flutter.plugin.common.MethodChannel;
 import plugin.model.FlutterChannel;

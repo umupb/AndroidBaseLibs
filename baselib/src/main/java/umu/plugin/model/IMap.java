@@ -1,4 +1,4 @@
-package plugin.model;
+package umu.plugin.model;
 
 import java.util.Map;
 

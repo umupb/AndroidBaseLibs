@@ -1,4 +1,4 @@
-package plugin.util;
+package umu.plugin.util;
 
 import android.text.TextUtils;
 

@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.gitlab.jianhua@umu.com'
+group='com.github.umupub'
 
 android {
     compileSdkVersion 28
@@ -26,5 +26,4 @@ android {
 }
 
 dependencies {
-    implementation files('libs/flutter.jar')
 }

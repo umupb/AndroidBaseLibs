@@ -1,4 +1,4 @@
-package plugin.util;
+package com.umu.channel;
 
 /**
  * 常量数据

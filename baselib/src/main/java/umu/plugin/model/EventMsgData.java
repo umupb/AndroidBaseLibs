@@ -1,4 +1,4 @@
-package plugin.model;
+package umu.plugin.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +26,7 @@ public class EventMsgData implements FlutterChannel {
         map.put("event", event);
         if (data != null)
             map.put("data", data.resultMap());
-        return null;
+        return map;
     }
 
     @Override

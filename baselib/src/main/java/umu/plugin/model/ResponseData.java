@@ -1,8 +1,6 @@
-package plugin.model;
+package umu.plugin.model;
 
 import java.util.Map;
-
-import plugin.util.FlutterConstant;
 
 /**
  * 响应数据块
