@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.umupub'
+group='com.gitlab.jianhua@umu.com'
 
 android {
     compileSdkVersion 28
