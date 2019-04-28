@@ -37,6 +37,26 @@ public class IMap {
         return 0;
     }
 
+    public float optFloat(String key) {
+        if (map != null) {
+            Object o = map.get(key);
+            if (o != null && o instanceof Float) {
+                return (Float) o;
+            }
+        }
+        return 0f;
+    }
+
+    public double optDouble(String key) {
+        if (map != null) {
+            Object o = map.get(key);
+            if (o != null && o instanceof Double) {
+                return (Double) o;
+            }
+        }
+        return 0;
+    }
+
     public long optLong(String key) {
         if (map != null) {
             Object o = map.get(key);
