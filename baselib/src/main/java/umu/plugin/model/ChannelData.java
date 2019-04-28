@@ -9,8 +9,6 @@ import java.util.Map;
  * 作者：wjh on 2019-04-23 16:22
  */
 public class ChannelData<T extends FlutterChannel> implements FlutterChannel {
-    private static final String TAG = "ChannelData";
-
     public String uniqueId;
     public T data;
     public Map dataMap;
