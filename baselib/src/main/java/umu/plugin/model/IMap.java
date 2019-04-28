@@ -20,41 +20,41 @@ public class IMap {
     public String optStr(String key) {
         if (map != null) {
             Object o = map.get(key);
-            if (o instanceof String) {
+            if (o != null && o instanceof String) {
                 return (String) o;
             }
         }
         return null;
     }
 
-    public Integer optInt(String key) {
+    public int optInt(String key) {
         if (map != null) {
             Object o = map.get(key);
-            if (o instanceof Integer) {
+            if (o != null && o instanceof Integer) {
                 return (Integer) o;
             }
         }
-        return null;
+        return 0;
     }
 
-    public Long optLong(String key) {
+    public long optLong(String key) {
         if (map != null) {
             Object o = map.get(key);
-            if (o instanceof Long) {
+            if (o != null && o instanceof Long) {
                 return (Long) o;
             }
         }
-        return null;
+        return 0;
     }
 
-    public Boolean optBool(String key) {
+    public boolean optBool(String key) {
         if (map != null) {
             Object o = map.get(key);
-            if (o instanceof Boolean) {
+            if (o != null && o instanceof Boolean) {
                 return (Boolean) o;
             }
         }
-        return null;
+        return false;
     }
 
     public Object optObj(String key) {
@@ -68,7 +68,7 @@ public class IMap {
     public Map optMap(String key) {
         if (map != null) {
             Object o = map.get(key);
-            if (o instanceof Map) {
+            if (o != null && o instanceof Map) {
                 return (Map) o;
             }
         }
