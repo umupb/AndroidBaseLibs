@@ -1,7 +1,5 @@
 package umu.plugin.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -76,40 +74,4 @@ public class IMap {
         }
         return null;
     }
-
-    public void optList(String key, ClassT ClassT) {
-        if (map != null) {
-            Object o = map.get(key);
-            if (o instanceof List) {
-                ClassT.toList((List) o);
-                return;
-            }
-        }
-
-        ClassT.list(null);
-    }
-
-    public static abstract class ClassT<T extends FlutterChannel> {
-        public void toList(List list) {
-            if (list != null) {
-                List<T> ts = new ArrayList<>();
-                boolean typeState = false; // 增加一个状态可减少遍历时的类型转换
-                for (Object lo : list) {
-                    if (!typeState && lo instanceof FlutterChannel) {
-                        typeState = true;
-                    }
-                    if (!typeState) {
-                        break;
-                    }
-
-                    ts.add((T) lo);
-                }
-
-                list(ts);
-            }
-        }
-
-        public abstract void list(List<T> ts);
-    }
-
 }
