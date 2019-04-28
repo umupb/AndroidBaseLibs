@@ -1,7 +1,5 @@
 package umu.plugin.model;
 
-import android.util.Log;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,30 +30,6 @@ public class ChannelData<T extends FlutterChannel> implements FlutterChannel {
         IMap iMap = IMap.map(map);
         uniqueId = iMap.optStr("uniqueId");
         dataMap = iMap.optMap("data");
-    }
-
-    /**
-     * 类型扩展使用
-     *
-     * @param c
-     * @param <T>
-     * @return
-     */
-    public <T extends FlutterChannel> T mapToObj(Class<T> c) {
-        if (dataMap != null) {
-            try {
-                T t = (T) Class.forName(c.getName()).newInstance();
-                t.parsingMap(dataMap);
-                return t;
-            } catch (InstantiationException e) {
-                Log.e(TAG, "JSON:    " + e.getMessage());
-            } catch (IllegalAccessException e) {
-                Log.e(TAG, "JSON:    " + e.getMessage());
-            } catch (ClassNotFoundException e) {
-                Log.e(TAG, "JSON:    " + e.getMessage());
-            }
-        }
-        return null;
     }
 
     public ChannelData data(T data) {
