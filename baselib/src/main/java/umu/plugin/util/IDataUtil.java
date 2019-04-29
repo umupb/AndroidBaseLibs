@@ -74,4 +74,27 @@ public class IDataUtil {
         }
         return null;
     }
+
+    /**
+     * list<T> To list<Map>
+     *
+     * @param list
+     * @param <T>
+     * @return
+     */
+    public static <T extends FlutterChannel> List<Map> toListMap(List<T> list) {
+        List<Map> mapList = null;
+        if (list != null && !list.isEmpty()) {
+            mapList = new ArrayList<>();
+            for (T t : list) {
+                Map channelMap = t.resultMap();
+                if (channelMap == null) {
+                    continue;
+                }
+
+                mapList.add(channelMap);
+            }
+        }
+        return mapList;
+    }
 }

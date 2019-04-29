@@ -2,6 +2,8 @@ package umu.plugin.model;
 
 import java.util.Map;
 
+import umu.plugin.util.NumberUtil;
+
 /**
  * 作者：wjh on 2019-04-23 17:03
  */
@@ -20,8 +22,8 @@ public class IMap {
     public String optStr(String key) {
         if (map != null) {
             Object o = map.get(key);
-            if (o != null && o instanceof String) {
-                return (String) o;
+            if (o != null) {
+                return String.valueOf(o);
             }
         }
         return null;
@@ -30,8 +32,8 @@ public class IMap {
     public int optInt(String key) {
         if (map != null) {
             Object o = map.get(key);
-            if (o != null && o instanceof Integer) {
-                return (Integer) o;
+            if (o != null) {
+                return NumberUtil.parseInt(o);
             }
         }
         return 0;
@@ -40,8 +42,8 @@ public class IMap {
     public float optFloat(String key) {
         if (map != null) {
             Object o = map.get(key);
-            if (o != null && o instanceof Float) {
-                return (Float) o;
+            if (o != null) {
+                return NumberUtil.parseFloat(o);
             }
         }
         return 0f;
@@ -50,8 +52,8 @@ public class IMap {
     public double optDouble(String key) {
         if (map != null) {
             Object o = map.get(key);
-            if (o != null && o instanceof Double) {
-                return (Double) o;
+            if (o != null) {
+                return NumberUtil.parseDouble(o);
             }
         }
         return 0;
@@ -60,8 +62,8 @@ public class IMap {
     public long optLong(String key) {
         if (map != null) {
             Object o = map.get(key);
-            if (o != null && o instanceof Long) {
-                return (Long) o;
+            if (o != null) {
+                return NumberUtil.parseLong(o);
             }
         }
         return 0;
@@ -70,7 +72,7 @@ public class IMap {
     public boolean optBool(String key) {
         if (map != null) {
             Object o = map.get(key);
-            if (o != null && o instanceof Boolean) {
+            if (o != null) {
                 return (Boolean) o;
             }
         }
