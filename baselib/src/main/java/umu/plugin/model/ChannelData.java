@@ -10,6 +10,7 @@ import java.util.Map;
  */
 public class ChannelData<T extends FlutterChannel> implements FlutterChannel {
     public String uniqueId;
+    public String url;
     public T data;
     public Map dataMap;
 
@@ -28,6 +29,10 @@ public class ChannelData<T extends FlutterChannel> implements FlutterChannel {
         IMap iMap = IMap.map(map);
         uniqueId = iMap.optStr("uniqueId");
         dataMap = iMap.optMap("data");
+
+        if (dataMap == null) { // 兼容Flutter端数据传递
+            url = iMap.optStr("data");
+        }
     }
 
     public ChannelData data(T data) {
