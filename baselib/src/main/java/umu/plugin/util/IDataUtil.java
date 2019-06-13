@@ -97,4 +97,25 @@ public class IDataUtil {
         }
         return mapList;
     }
+
+    /**
+     * list<Map> To list<T>
+     *
+     * @param mapList
+     * @param c
+     * @param <T>
+     * @return
+     */
+    public static <T extends FlutterChannel> List<T> toListMap(List<Map> mapList, Class<T> c) {
+        List<T> list = null;
+        if (mapList != null && !mapList.isEmpty()) {
+            list = new ArrayList<>();
+            for (Map m : mapList) {
+                T t = flutterToObj(m, c);
+                if (t != null)
+                    list.add(t);
+            }
+        }
+        return list;
+    }
 }
